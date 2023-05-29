@@ -121,6 +121,12 @@ You can check the scheduled cron jobs by running the following command in the te
   crontab -l
   ```
 
+
+
+https://github.com/mayankesh239/PII_Tracker/assets/77605686/25a9331c-c8c7-4db5-a297-b32a84914b9e
+
+
+
 If the cron job is not working you can refer [this](https://docs.google.com/document/d/1_BUI6k9hF7IWwPvSHw9Kq0CMRf0g5QMpY1luzwC6iV4/edit). This doc has a list some of the ways to fix the issues.
 
 Note: this will work in linux. You can use task scheduler to perform this on windows ( [refer this](https://docs.google.com/document/d/1pPUWmuMvIDrEsyn7dUwCYvBZW6IP2PPn3iKtRDLvExw/edit?usp=sharing) ) 
