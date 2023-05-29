@@ -49,12 +49,19 @@ Note: it only collects the useful informations ( entries for which `sensitive is
 - Give the token a suitable description and select the necessary scopes (e.g., repo access).
 - Click on "Generate token" and copy the generated access token.
 
-2. Set the MongoDB URI:
+2. Set the GitHub access token as an environment variable:
+- Open the terminal and execute the following command:
+  ```
+  $ export GITHUB_ACCESS_TOKEN="your-access-token"
+  ```
+  Replace "your-access-token" with the GitHub access token you generated.
+  
+3. Set the MongoDB URI:
 - Open `main.py` file in a text editor.
 - Replace the value of `mongodb_uri` variable (at line no 14 ) with your MongoDB connection URI.
  You can refer this [Create Cluster Using MongoDB Atlas](https://docs.google.com/document/d/1CviQ3No4yMwsjREFgg24yV1wBf2knBMoHgV8EOj17kE/edit?usp=sharing)) to create cluster in MongoDB Atlas.
   
-3. Configure the application:
+4. Configure the application:
 - Open the main.py file.
 - Update the following variables in the code:
     * repository_url: Set it to the GitHub repository URL containing the PII data file.
@@ -62,7 +69,6 @@ Note: it only collects the useful informations ( entries for which `sensitive is
     * mongodb_uri: Set it to the connection URI for your MongoDB database.
     * database_name: Set it to the name of the MongoDB database.
     * collection_name: Set it to the name of the MongoDB collection.
-    * GITHUB_ACCESS_TOKEN: Set it to your GitHub access token.
 
 ## Usage
 
