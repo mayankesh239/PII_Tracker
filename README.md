@@ -74,8 +74,9 @@ Note: it only collects the useful informations ( entries for which `sensitive is
 
 
 
-https://github.com/mayankesh239/PII_Tracker/assets/77605686/ed2f3080-21e8-4344-abe5-663c291cf6e5
+<!-- https://github.com/mayankesh239/PII_Tracker/assets/77605686/ed2f3080-21e8-4344-abe5-663c291cf6e5  this is a compressed video -->
 
+[demo_1.webm](https://github.com/mayankesh239/PII_Tracker/assets/77605686/00d00b00-67b1-429d-956f-3eeee377fef5)
 
 
 To run the application and perform data synchronization, execute the following command in the project directory:
@@ -122,8 +123,9 @@ You can check the scheduled cron jobs by running the following command in the te
   ```
 
 
-https://github.com/mayankesh239/PII_Tracker/assets/77605686/25a9331c-c8c7-4db5-a297-b32a84914b9e
+<!-- https://github.com/mayankesh239/PII_Tracker/assets/77605686/25a9331c-c8c7-4db5-a297-b32a84914b9e  this is a compressed video -->
 
+[demo_2.webm](https://github.com/mayankesh239/PII_Tracker/assets/77605686/89b9eef2-28e5-4930-97fb-529b75cfe87e)
 
 
 
