@@ -71,7 +71,7 @@ Note: it only collects the useful informations ( entries for which `sensitive is
     * collection_name: Set it to the name of the MongoDB collection.
 
 ## Usage
-
+[Screencast from 29-05-23 10:44:55 AM IST.webm](https://github.com/mayankesh239/PII_Tracker/assets/77605686/520a1fc2-5aa0-41cc-be87-b523a0c8a7f9)
 To run the application and perform data synchronization, execute the following command in the project directory:
 
   ```
