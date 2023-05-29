@@ -89,6 +89,10 @@ The application will fetch data from the this GitHub repository [file](https://g
 
 ## Cron Job Configuration
 
+<!-- https://github.com/mayankesh239/PII_Tracker/assets/77605686/25a9331c-c8c7-4db5-a297-b32a84914b9e  this is a compressed video -->
+
+[demo_2.webm](https://github.com/mayankesh239/PII_Tracker/assets/77605686/89b9eef2-28e5-4930-97fb-529b75cfe87e)
+
 To set up a cron job for periodic execution, you can use the `crontab` command on Linux systems:
 
 1. Open the terminal and execute the following command:
@@ -121,11 +125,6 @@ You can check the scheduled cron jobs by running the following command in the te
   ```
   crontab -l
   ```
-
-
-<!-- https://github.com/mayankesh239/PII_Tracker/assets/77605686/25a9331c-c8c7-4db5-a297-b32a84914b9e  this is a compressed video -->
-
-[demo_2.webm](https://github.com/mayankesh239/PII_Tracker/assets/77605686/89b9eef2-28e5-4930-97fb-529b75cfe87e)
 
 
 
