@@ -13,7 +13,7 @@ Note: it only collects the useful informations ( entries for which `sensitive is
 
 ## Milestones achieved
 
-1. Given a GitHub link to a file like [this](https://github.com/mayankesh239/main/blob/master/general.json) which contains patterns for PII data, a cron mentioned [here](https://github.com/mayankesh239/GDSC-website/blob/master/general.json) will periodically run and fetch data from this file and store this in a mongo collection.
+1. Given a GitHub link to a file like [this](https://github.com/mayankesh239/main/blob/master/general.json) which contains patterns for PII data, a cron mentioned [here](https://github.com/mayankesh239/PII_Tracker/blob/master/README.md#cron-job-configuration) will periodically run and fetch data from this file and store this in a mongo collection.
 
 2. Note that if a new entry is added to the file, then the same would be reflected in mongo on the next run. Same goes for updates and deletes as well.
 
