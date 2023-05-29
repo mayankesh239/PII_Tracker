@@ -123,7 +123,7 @@ You can check the scheduled cron jobs by running the following command in the te
 
 
 
-https://github.com/mayankesh239/PII_Tracker/assets/77605686/25a9331c-c8c7-4db5-a297-b32a84914b9e
+
 
 
 
