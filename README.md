@@ -1,4 +1,4 @@
-# PII Sync Application
+# PII_Tracker App
 
 This application is designed to periodically fetch data from a public GitHub repository file like [this](https://github.com/mayankesh239/GDSC-website/blob/master/general.json) containing patterns for Personally Identifiable Information (PII) data which the help of __github acess token__. It then synchronizes the data with a MongoDB collection.
 
