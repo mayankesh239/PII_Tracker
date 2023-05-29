@@ -13,7 +13,7 @@ Note: it only collects the useful informations ( entries for which `sensitive is
 
 ## Milestones achieved
 
-1. Given a GitHub link to a file like [this](https://github.com/mayankesh239/main/blob/master/general.json) which contains patterns for PII data, a cron mentioned [here](https://github.com/mayankesh239/PII_Tracker/blob/master/README.md#cron-job-configuration) will periodically run and fetch data from this file and store this in a mongo collection.
+1. Given a GitHub link to a file like [this](https://github.com/mayankesh239/main/blob/master/general.json) which contains patterns for PII data, a cron mentioned [here](https://github.com/mayankesh239/PII_Tracker/blob/master/README.md#cron-job-configuration) will periodically run and fetch data from this file and store this in the mongo collection mentioned in the mongodb_uri of main.py.
 
 2. Note that if a new entry is added to the file, then the same would be reflected in mongo on the next run. Same goes for updates and deletes as well.
 
@@ -28,12 +28,12 @@ Note: it only collects the useful informations ( entries for which `sensitive is
 
 1. Clone the repository:
   ```
-  $ git clone https://github.com/your-username/pii-sync-app.git
+  $ git clone https://github.com/mayankesh239/PII_Tracker.git 
   ```
 
 2. Navigate to the project directory:
   ```
-  $ cd pii-sync-app
+  $ cd PII_Tracker
   ```
 
 3. Install the required Python packages:
@@ -51,7 +51,7 @@ Note: it only collects the useful informations ( entries for which `sensitive is
 
 2. Set the MongoDB URI:
 - Open `main.py` file in a text editor.
-- Replace the value of `mongodb_uri` variable (at line no 18 ) with your MongoDB connection URI.
+- Replace the value of `mongodb_uri` variable (at line no 14 ) with your MongoDB connection URI.
  You can refer this [Create Cluster Using MongoDB Atlas](https://docs.google.com/document/d/1CviQ3No4yMwsjREFgg24yV1wBf2knBMoHgV8EOj17kE/edit?usp=sharing)) to create cluster in MongoDB Atlas.
   
 3. Configure the application:
@@ -72,7 +72,7 @@ To run the application and perform data synchronization, execute the following c
   $ python3 main.py
   ```
 
-The application will fetch data from the this GitHub repository [file](https://github.com/mayankesh239/GDSC-website/blob/master/general.json), filter the sensitive information based on the "sensitive" attribute, and update the MongoDB collection with the filtered data. It will log the execution status and any errors encountered in the `pii_sync.log` file.
+The application will fetch data from the this GitHub repository [file](https://github.com/mayankesh239/main/blob/master/general.json), filter the sensitive information based on the "sensitive" attribute, and update the MongoDB collection with the filtered data. It will log the execution status and any errors encountered in the `pii_sync.log` file.
 
 ## Cron Job Configuration
 
@@ -84,17 +84,17 @@ To set up a cron job for periodic execution, you can use the `crontab` command o
   ```
   If prompted to select an editor, choose your preferred editor (e.g., nano, vim).
   
-2. Add the following line to the crontab file to schedule the job at 8:30 PM every day:
+2. Add the following line to the crontab file to schedule the job at 10:32 PM every day:
   ```
-  30 20 * * * /usr/bin/python3 /path/to/your/pii-sync-app/main.py 
+  32 22 * * * /usr/bin/python3 /path/to/your/pii_tracker/main.py 
   ```
-Replace `/path/to/your/pii-sync-app` with the actual path to the project directory. Save the crontab file and exit the editor.
+Replace `/path/to/your/pii-tracker` with the actual path to the project directory. Save the crontab file and exit the editor.
 
 3. Execute the following command:
   ```
   sudo apt install postfix
   ```
-During the installation, you will be prompted to choose the general type of configuration. Select "Internet Site" and press Enter. Then, enter your fully qualified domain name (FQDN) when prompted. If you don't have a registered domain name, you can use the hostname of your server as the FQDN. To find out the hostname, you can run the following command in your terminal:
+ During the installation, you will be prompted to choose the general type of configuration. Select "Internet Site" and press Enter. Then, enter your fully qualified domain name (FQDN) when prompted. If you don't have a registered domain name, you can use the hostname of your server as the FQDN. To find out the hostname, you can run the following command in your terminal:
 
   ```
   hostname
