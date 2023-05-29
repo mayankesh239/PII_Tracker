@@ -1,6 +1,6 @@
 # PII_Tracker App
 
-This application is designed to periodically fetch data from a public GitHub repository file like [this](https://github.com/mayankesh239/GDSC-website/blob/master/general.json) containing patterns for Personally Identifiable Information (PII) data which the help of __github acess token__. It then synchronizes the data with a MongoDB collection.
+This application is designed to periodically fetch data from a public GitHub repository file like [this](https://github.com/mayankesh239/main/blob/master/general.json) containing patterns for Personally Identifiable Information (PII) data which the help of __github acess token__. It then synchronizes the data with a MongoDB collection.
 
 - It fetches data periodically from the GitHub file specified by the link.
 - It stores the fetched data in a MongoDB collection.
@@ -13,7 +13,7 @@ Note: it only collects the useful informations ( entries for which `sensitive is
 
 ## Milestones achieved
 
-1. Given a GitHub link to a file like [this](https://github.com/mayankesh239/GDSC-website/blob/master/general.json) which contains patterns for PII data, a cron mentioned [here](https://github.com/mayankesh239/GDSC-website/blob/master/general.json) will periodically run and fetch data from this file and store this in a mongo collection.
+1. Given a GitHub link to a file like [this](https://github.com/mayankesh239/main/blob/master/general.json) which contains patterns for PII data, a cron mentioned [here](https://github.com/mayankesh239/GDSC-website/blob/master/general.json) will periodically run and fetch data from this file and store this in a mongo collection.
 
 2. Note that if a new entry is added to the file, then the same would be reflected in mongo on the next run. Same goes for updates and deletes as well.
 
