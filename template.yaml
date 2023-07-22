@@ -1,0 +1,58 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  EC2Instance1:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro  
+      ImageId: ami-078efad6f7ec18b8a # Amazon Linux 2 AMI in the ap-south-1 (Mumbai) region
+      SecurityGroupIds:
+        - !Ref EC2Instance1SecurityGroup
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          echo "32 22 * * * /usr/bin/python3 https://pythonscriptmayankesh239.s3.ap-south-1.amazonaws.com/main.py" | crontab - 
+      Tags:
+        - Key: Name
+          Value: CronInstance
+
+  EC2Instance2:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-078efad6f7ec18b8a  # Amazon Linux 2 AMI in the ap-south-1 (Mumbai) region
+      SecurityGroupIds:
+        - !Ref EC2Instance2SecurityGroup
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          yum -y install mongodb-server
+          systemctl start mongod
+      Tags:
+        - Key: Name
+          Value: MongoDBInstance
+
+  EC2Instance1SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for EC2Instance1
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: EC2Instance1SecurityGroup
+
+  EC2Instance2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for EC2Instance2
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 27017
+          ToPort: 27017
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: EC2Instance2SecurityGroup
